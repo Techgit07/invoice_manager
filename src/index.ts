@@ -1,6 +1,6 @@
 "use strict"
 /**
- * @author Semicolon Solution
+ * @author Kaushal Nena
  * @description Server and REST API config
  */
 import * as bodyParser from 'body-parser';
@@ -21,16 +21,15 @@ app.use(bodyParser.json({ limit: '200mb' }))
 app.use(bodyParser.urlencoded({ limit: '200mb', extended: true }))
 const health = (req, res) => {
     return res.status(200).json({
-        message: `Tap Digital Backend Server is Running, Server health is green`,
+        message: `Invoice Manager Backend Server is Running, Server health is green`,
         app: packageInfo.name,
         version: packageInfo.version,
         description: packageInfo.description,
         author: packageInfo.author,
-        contributors: packageInfo.contributors,
         license: packageInfo.license
     })
 }
-const bad_gateway = (req, res) => { return res.status(502).json({ status: 502, message: "Tap Digital Backend Backend API Bad Gateway" }) }
+const bad_gateway = (req, res) => { return res.status(502).json({ status: 502, message: "Invoice Manager Backend Backend API Bad Gateway" }) }
 
 app.get('/', health);
 app.get('/health', health);
