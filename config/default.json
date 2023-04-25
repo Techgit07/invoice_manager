@@ -1,0 +1,34 @@
+{
+  "db_url": "mongodb+srv://Semicolon:MMqi45qUece6Qu6B@cluster0.hlifa.mongodb.net/Tapdigital",
+  "jwt_token_secret": "Tap-Digital-Backend-Key",
+  "refresh_jwt_token_secret": "Tap-Digital-Backend-Key",
+  "nodeMail": {
+    "mail": "kaushal.semicolon@gmail.com",
+    "password": "llqfpfupyegahoan",
+    "service": "gmail"
+  },
+  "aws": {
+    "access_key": "AKIARDPJ5IZA4JFOG4FE",
+    "secret_key": "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",
+    "bucket_region": "us-east-1",
+    "bucket_name": "tapdigital",
+    "bucket_url": "https://tapdigital.s3.amazonaws.com",
+    "aws_arn": "arn:aws:sns:us-east-1:076189353537:tap-digital"
+  },
+  "paypal_live": {
+    "mode": "live",
+    "client_id": "AfRe7ILvAfGw1miLixmfzjAngIH1DNdnFrEzMaetL_xGa2m90YNhuYC3iX9e6IRDYqaS-yyZWy5MB2Lu",
+    "client_secret": "EBFNgCoiYZkOWK5YrQBDt5LPXBF4XksHemmeWvb1M8Dau_kT8lg6525MBjhuAG0QFNTkWy4uO-XI-xXB",
+    "currency": "USD"
+  },
+  "paypal": {
+    "mode": "sandbox",
+    "sandbox_oauth_token": "https://api-m.sandbox.paypal.com/v1/oauth2/token",
+    "client_id": "AYY1vPdKYu10UTK8r2ObbYDYaX0wHphJ3Y6iVfCUgpGVkL9naYN0Aod2i6GTjdR3cDTBOudPvCK2Qn8e",
+    "client_secret": "EFFZsrE8xmuT7_NIbZD5ek9SblI6IhAiqOOK6nu8MY83v1W-qWLcg4o9t4hVCfn6SB6bUEmxwY5yZRvF",
+    "return_url": "http://192.168.29.134/user/paypal_success",
+    "cancel_url": "http://192.168.29.134/user/paypal_failed",
+    "currency": "USD"
+  },
+  "fcmKey": "AAAATmszE_Y:APA91bF4yIGKja6UMZQU-4lU82rolRgxAOr3MGKUshbnjE_j-IO9-1GheFdQy8ZIpHQ9suNbg-qIwKmDyLGPTQJ_228OTi__axHCcH7igm8pUojZslu_OBu8JL4WXEaDGfm6nAU_a0bf"
+}
