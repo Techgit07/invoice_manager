@@ -1,0 +1,45 @@
+version: 2.1
+
+jobs:
+  package:
+    docker:
+      - image: docker:17.05.0-ce-git
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Building and packaging application
+          command: |
+            APP_VERSION=$(echo $(date +%s))
+            docker build -t $DC_USERNAME/invoicemanager -t $DC_USERNAME/invoicemanager:$APP_VERSION .
+            docker login -u $DC_USERNAME -p $DC_PASS
+            docker images
+            docker push $DC_USERNAME/invoicemanager:latest 
+            docker push $DC_USERNAME/invoicemanager:$APP_VERSION
+
+  deploy:
+    docker:
+      - image: cimg/aws:2023.04.1
+    steps:
+      - checkout
+      - run:
+          name: Lets deploy thsi application
+          command: |
+            aws --version
+            APP_VERSION=$(echo $(date +%s))
+            # envsubst < templates/Dockerrun.aws.json > Dockerrun.aws.json
+            aws s3 cp ./templates/Dockerrun.aws.json s3://$AWS_S3_BUCKET/Dockerrun.aws.json 
+            aws elasticbeanstalk create-application-version --application-name $APP_NAME --version-label $APP_VERSION --source-bundle S3Bucket=$AWS_S3_BUCKET,S3Key=Dockerrun.aws.json
+            aws elasticbeanstalk update-environment --application-name $APP_NAME --version-label $APP_VERSION --environment-name $APP_ENV_NAME
+            aws elasticbeanstalk wait environment-updated --application-name $APP_NAME --version-label $APP_VERSION --environment-name $APP_ENV_NAME
+
+workflows:
+  testing:
+    jobs:
+      - package
+      - deploy:
+          requires:
+            - package
+          filters:
+            branches:
+              only: main

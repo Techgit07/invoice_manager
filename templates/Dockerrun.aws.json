@@ -1,0 +1,11 @@
+{
+    "AWSEBDockerrunVersion": "1",
+    "Image": {
+        "Name": "kaushaldocker7/invoicemanager:latest"
+    },
+    "Ports": [
+        {
+            "ContainerPort": 80
+        }
+    ]
+}
