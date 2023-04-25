@@ -4,15 +4,15 @@
   "refresh_jwt_token_secret": "Invoice-Backend-Key",
   "nodeMail": {
     "mail": "kaushal.semicolon@gmail.com",
-    "password": "llqfpfupyegahoan",
+    "password": "",
     "service": "gmail"
   },
   "aws": {
-    "access_key": "AKIAUGGVBOI6VE5A4PJJ",
-    "secret_key": "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",
+    "access_key": "",
+    "secret_key": "",
     "bucket_region": "us-east-1",
     "bucket_name": "invoicehandler",
-    "bucket_url": "https://tapdigital.s3.amazonaws.com",
+    "bucket_url": "",
     "aws_arn": "arn:aws:s3:::invoicehandler"
   },
   "paypal_live": {
