@@ -1,5 +1,5 @@
 {
-  "name": "tap-digital-backend",
+  "name": "invoice-manager-backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,7 +13,7 @@
     "dist": "sh ./scripts/build.sh",
     "server": "tsc-watch --outDir ./build --onSuccess \"npm run start -- --mode=http\" --onFailure \"echo ERROR! Compilation Failed\""
   },
-  "author": "Semicolon Solution",
+  "author": "Kaushal Nena",
   "contributors": [
     "kaushal nena <kaushal.semicolon@gmail.com>"
   ],
