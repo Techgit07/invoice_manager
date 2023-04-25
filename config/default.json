@@ -1,19 +1,19 @@
 {
-  "db_url": "mongodb+srv://Semicolon:MMqi45qUece6Qu6B@cluster0.hlifa.mongodb.net/Tapdigital",
-  "jwt_token_secret": "Tap-Digital-Backend-Key",
-  "refresh_jwt_token_secret": "Tap-Digital-Backend-Key",
+  "db_url": "mongodb://127.0.0.1/InvoiceData",
+  "jwt_token_secret": "Invoice-Backend-Key",
+  "refresh_jwt_token_secret": "Invoice-Backend-Key",
   "nodeMail": {
     "mail": "kaushal.semicolon@gmail.com",
     "password": "llqfpfupyegahoan",
     "service": "gmail"
   },
   "aws": {
-    "access_key": "AKIARDPJ5IZA4JFOG4FE",
-    "secret_key": "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",
+    "access_key": "AKIAUGGVBOI6VE5A4PJJ",
+    "secret_key": "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",
     "bucket_region": "us-east-1",
-    "bucket_name": "tapdigital",
+    "bucket_name": "invoicehandler",
     "bucket_url": "https://tapdigital.s3.amazonaws.com",
-    "aws_arn": "arn:aws:sns:us-east-1:076189353537:tap-digital"
+    "aws_arn": "arn:aws:s3:::invoicehandler"
   },
   "paypal_live": {
     "mode": "live",
