@@ -8,7 +8,7 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
-          name: Building and packaging application
+          name: Building and packaging application 
           command: |
             docker build -t $DC_USERNAME/invoicemanager .
             docker login -u $DC_USERNAME -p $DC_PASS
