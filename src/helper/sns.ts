@@ -36,14 +36,14 @@ export const sendPDF = async (number: any, link: any) => {
                         console.log(error);
                     }
                     var params = {
-                        Message: `your Tap-Digital Invoice Link ${link}`,
+                        Message: `your Invoice-Manager Link ${link}`,
                         PhoneNumber: number,
                         MessageAttributes: {
                             'AWS.SNS.SMS.SMSType': {
                                 DataType: 'String',
                                 StringValue: 'Transactional',
                             },
-                            'AWS.SNS.SMS.SenderID': { DataType: 'String', StringValue: 'Tap-Digital' }
+                            'AWS.SNS.SMS.SenderID': { DataType: 'String', StringValue: 'Invoice-Manager' }
                         }
                     };
                     console.log("----params", params);

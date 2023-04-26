@@ -21,12 +21,12 @@ export const forgotPassword_mail = async (mail_data: any) => {
             const mailOption = {
                 from: mail.mail,
                 to: mail_data?.email,
-                subject: "Tap Digital Sign_Up OTP Here",
+                subject: "Invoice Manager Sign_Up OTP Here",
                 html: `<html lang="en-US">
                 <head>
                     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-                    <title>Tap Sign up OTP</title>
-                    <meta name="description" content="Tap Sign up OTP.">
+                    <title>Invoice Sign up OTP</title>
+                    <meta name="description" content="Invoice Sign up OTP.">
                     <style type="text/css">
                         a:hover {
                             text-decoration: underline !important;
@@ -57,18 +57,18 @@ export const forgotPassword_mail = async (mail_data: any) => {
                                                     <td style="padding:0 35px;">
                                                         <h1
                                                             style="color:#1e1e2d; font-weight:500; margin:0;font-size:32px;font-family:'Rubik',sans-serif;">
-                                                            Tap OTP Verification</h1>
+                                                            Invoice OTP Verification</h1>
                                                         <span
                                                             style="display:inline-block; vertical-align:middle; margin:29px 0 26px; border-bottom:1px solid #cecece; width:100px;"></span>
                                                         <p
                                                             style="color:#455056; font-size:15px;line-height:24px;text-align:left; margin:0;">
                                                             Hi ${mail_data.email},
                                                             <br><br>
-                                                            Your Verification OTP For Tap Digital App Sign up is <span style: "font-weight:700, color: #1e1e2d">${mail_data.otp}. </span>Please do
+                                                            Your Verification OTP For Invoice Manager App Sign up is <span style: "font-weight:700, color: #1e1e2d">${mail_data.otp}. </span>Please do
                                                             not share it anyone.
                                                             <br><br>
                                                             Thanks & Regards<br>
-                                                            Team Tap Digital
+                                                            Team Invoice Manager
                                                         </p>
                                                     </td>
                                                 </tr>
@@ -122,7 +122,6 @@ export const invoiceByMail_PDF = async (mail_data: any) => {
                 attachments: [{
                     filename: 'Invoice.pdf',
                     path: `${mail_data.invoice.pdfUrl}`
-                    // path: `https://tapdigital.s3.amazonaws.com/pdf/${mail_data.invoice._id}/Invoice.pdf`
                 }],
                 html: `<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
         <title>Invoice Pdf Send Mail </title>
@@ -167,7 +166,7 @@ export const invoiceByMail_PDF = async (mail_data: any) => {
                                                 <br>
                                                 Thanks,
                                                 <br>
-                                               Tap-Digital-App
+                                               Invoice Manager App
                                             </p>
                                         </td>
                                     </tr>
@@ -260,7 +259,7 @@ export const receiptSend = async (mail_data: any) => {
                                                 <br>
                                                 Thanks,
                                                 <br>
-                                               Tap-Digital-App
+                                               Invoice Manager App
                                             </p>
                                         </td>
                                     </tr>
@@ -348,7 +347,7 @@ export const preferences_mail = async (mail_data: any) => {
                                                 <br>
                                                 Thanks,
                                                 <br>
-                                               Tap-Digital-App
+                                               Invoice Manager App
                                             </p>
                                         </td>
                                     </tr>

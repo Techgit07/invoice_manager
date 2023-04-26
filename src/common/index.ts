@@ -83,7 +83,7 @@ export const notification_types = {
                 title: `${data?.title}`, body: `${data?.description}`
             },
             data: {
-                type: 1, notificationId: data?.notificationId, click_action: "TAP-DIGITAL_NOTIFICATION_CLICK",
+                type: 1, notificationId: data?.notificationId, click_action: "INVOICE_NOTIFICATION_CLICK",
             }
         }
     },

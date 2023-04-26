@@ -7,7 +7,7 @@
     "build": "tsc",
     "clean": "npx rimraf ./build",
     "start": "node build/server.js",
-    "zip": "tar.exe -a -c -f tap-digital-backend.zip build package.json config .platform .npmrc .ebextensions",
+    "zip": "tar.exe -a -c -f invoice-manager-backend.zip build package.json config .platform .npmrc .ebextensions",
     "deploy": "start deploy.bat",
     "ebs": "start ebs.bat",
     "dist": "sh ./scripts/build.sh",
